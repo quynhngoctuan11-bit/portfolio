@@ -138,4 +138,9 @@
   .aboutMe__content_container {
     border-radius: 2rem;
   }
+
+  /* footer */
+  footer {
+    padding: 0;
+  }
 }
