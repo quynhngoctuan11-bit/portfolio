@@ -1,3 +1,6 @@
+/* ==========================================
+   1. KHUNG DỰ ÁN (PROJECT CARDS)
+   ========================================== */
 .projects_container {
   display: flex;
   flex-direction: column;
@@ -67,11 +70,166 @@
     font-weight: 500;
     text-transform: capitalize;
     color: var(--p-950);
-    /* line clamp */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-clamp: 1;
     overflow: hidden;
   }
+}
+
+/* ==========================================
+   2. LIGHTBOX MODAL (BẢNG POPUP)
+   ========================================== */
+.lightbox-overlay,
+.viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay[hidden],
+.viewer-overlay[hidden] {
+  display: none !important;
+}
+
+.lightbox-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+}
+
+.lightbox-close:hover {
+  color: #000;
+}
+
+#lightboxTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--p-950);
+}
+
+#lightboxDesc {
+  color: var(--n-500);
+  margin-bottom: 1.5rem;
+}
+
+.lightbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+/* ==========================================
+   3. DANH SÁCH ẢNH & CARD VIDEO TRONG POPUP
+   ========================================== */
+.lightbox-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lightbox-img:hover {
+  transform: scale(1.04);
+}
+
+/* Card Video có nút Play (Ẩn hoàn toàn thanh Cốc Cốc) */
+.video-thumb-card {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lightbox-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.play-btn-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.video-thumb-card:hover .play-btn-overlay {
+  background: rgba(37, 99, 235, 0.4);
+}
+
+.video-thumb-card:hover .lightbox-video-thumb {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   4. CHẾ ĐỘ XEM PHÓNG TO (FULL VIEW)
+   ========================================== */
+.viewer-img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.viewer-video-wrapper {
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewer-video {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }

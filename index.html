@@ -309,122 +309,82 @@
 
         <!-- cards -->
         <div class="projects__cards_container">
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#" data-gallery="tudien">
             <div class="projects_cards">
               <div class="projects__cards_wrapper">
                 <img
-                  src="./assets/assets/project1.jpg"
-                  alt="project1"
+                  src="./assets/assets/td5.jpg"
+                  alt="Giải 3 thi lắp tủ điện"
                   class="projects__cards_img"
                 />
               </div>
               <div class="projects__cards_titles">
                 <h4>dự án 1</h4>
-                <h3>Todo List</h3>
+                <h3>Giải 3 thi lắp tủ điện</h3>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#" data-gallery="may-lap-rap">
             <div class="projects_cards">
               <div class="projects__cards_wrapper">
                 <img
-                  src="./assets/assets/project2.jpg"
-                  alt="project1"
+                  src="./assets/assets/lr5.png"
+                  alt="máy lắp ráp"
                   class="projects__cards_img"
                 />
               </div>
               <div class="projects__cards_titles">
                 <h4>dự án 2</h4>
-                <h3>trang thông tin công nghệ</h3>
+                <h3>Máy lắp ráp</h3>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#" data-gallery="may-van-chuyen">
             <div class="projects_cards">
               <div class="projects__cards_wrapper">
                 <img
-                  src="./assets/assets/project3.jpg"
-                  alt="project1"
+                  src="./assets/assets/vc1.jpg"
+                  alt="máy vận chuyển"
                   class="projects__cards_img"
                 />
               </div>
               <div class="projects__cards_titles">
                 <h4>dự án 3</h4>
-                <h3>spotify clone</h3>
+                <h3>Máy vận chuyển</h3>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#" data-gallery="may-dan-tem">
             <div class="projects_cards">
               <div class="projects__cards_wrapper">
                 <img
-                  src="./assets/assets/project4.jpg"
-                  alt="project1"
+                  src="./assets/assets/dt1.jpg"
+                  alt="máy dán tem"
                   class="projects__cards_img"
                 />
               </div>
               <div class="projects__cards_titles">
                 <h4>dự án 4</h4>
-                <h3>facebook clone</h3>
+                <h3>Máy dán tem</h3>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#" data-gallery="robocon">
             <div class="projects_cards">
               <div class="projects__cards_wrapper">
                 <img
-                  src="./assets/assets/project5.jpg"
-                  alt="project1"
+                  src="./assets/assets/robocon.jpg"
+                  alt="robocon vòng trường"
                   class="projects__cards_img"
                 />
               </div>
               <div class="projects__cards_titles">
                 <h4>dự án 5</h4>
-                <h3>thiết kế trang doanh nghiệp</h3>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/quynhngoctuan11-bit/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/assets/project6.jpg"
-                  alt="project1"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>dự án 6</h4>
-                <h3>Thiết kế web</h3>
+                <h3>Robocon vòng trường</h3>
               </div>
             </div>
           </a>
@@ -439,5 +399,25 @@
         <p>© DatDepTrai Portfolio</p>
       </div>
     </footer>
+    <!-- ==========================================
+         LIGHTBOX POPUP (KHUNG XEM CHI TIẾT ĐỒ ÁN)
+         ========================================== -->
+    <!-- 1. Bảng hiển thị thông tin & danh sách ảnh dự án -->
+    <div id="lightbox" hidden class="lightbox-overlay">
+      <div class="lightbox-content">
+        <button id="lightboxClose" class="lightbox-close">&times;</button>
+        <h2 id="lightboxTitle"></h2>
+        <p id="lightboxDesc"></p>
+        <div id="lightboxGrid" class="lightbox-grid"></div>
+      </div>
+    </div>
+
+    <!-- 2. Khung xem phóng to 1 hình ảnh -->
+    <div id="viewer" hidden class="viewer-overlay">
+      <img id="viewerImg" src="" alt="Ảnh phóng to" />
+    </div>
+
+    <!-- 3. Nhúng file JavaScript xử lý Lightbox -->
+    <script src="gallery.js"></script>
   </body>
 </html>
